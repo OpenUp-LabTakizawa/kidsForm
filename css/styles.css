@@ -83,9 +83,9 @@ fieldset {
     border: 0;
 }
 
-li {
+/* li {
     list-style-type: none;
-}
+} */
 
 sup {
     vertical-align: super;
@@ -176,6 +176,7 @@ h1 {
 }
 
 .qa-set-ul {
+    list-style-type: disc;
     margin: 0 15px;
     list-style-position: outside;
     font-size: small;
