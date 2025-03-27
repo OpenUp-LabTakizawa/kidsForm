@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>イベント応募フォーム</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="src/submitForm.js"></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
 
         <form
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfw9oOLhZLjoNOreg4G2og-E64eqk9tgCU1jHC93d8EZOEbjA/formResponse"
-            method="post">
+            method="post" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="question-answer-set">
                 <p>こどもテックキャラバンについてご一読ください<br>こどもテックキャラバンは以下の企業・団体が事務局として関わっています</p>
                 <ul class="qa-set-ul">
@@ -67,7 +68,7 @@
                 <p>参加時の写真・動画・アンケート等を事務局が本イベントに関連して今後の広報等に使用すること、またイベント運営に必要な個人情報の取得に同意します。</p>
 
                 <label>
-                    <input type="checkbox" id="agree_personal_info" name="entry.1073673147" value="同意します"required>
+                    <input type="checkbox" id="agree_personal_info" name="entry.1073673147" value="同意します" required>
                     同意します
                 </label>
             </div>
@@ -151,7 +152,8 @@
             <div class="question-answer-set" style="display: none;">
                 <div class="form-group">
                     <label for="line_displayName">LINE_displayName</label>
-                    <input type="text" id="line_displayName" name="entry.1248337177" placeholder="LINE displayName" required>
+                    <input type="text" id="line_displayName" name="entry.1248337177" placeholder="LINE displayName"
+                        required>
                 </div>
             </div>
 
@@ -167,6 +169,13 @@
     </div>
 
     <script src="src/getUrlParameter.js"></script>
+
+    <!-- 回答完了ページへのリダイレクト処理 -->
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location= 'https://tanepon.github.io/kidsForm//pages/app_completed.html';}"></iframe>
 
 </body>
 
