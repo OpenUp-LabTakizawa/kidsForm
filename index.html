@@ -135,7 +135,6 @@
                     </label>
                     <select id="participants" name="entry.689062288" required>
                         <option value="" selected>選択してください</option>
-                        <option value="1">1人</option>
                         <option value="2">2人</option>
                         <option value="3">3人</option>
                         <option value="4">4人</option>
@@ -149,14 +148,14 @@
                 </div>
             </div>
 
-            <div class="question-answer-set">
+            <div class="question-answer-set" style="display: none;">
                 <div class="form-group">
                     <label for="line_displayName">LINE_displayName</label>
-                    <input type="text" id="line_userid" name="entry.1248337177" placeholder="LINE displayName" required>
+                    <input type="text" id="line_displayName" name="entry.1248337177" placeholder="LINE displayName" required>
                 </div>
             </div>
 
-            <div class="question-answer-set">
+            <div class="question-answer-set" style="display: none;">
                 <div class="form-group">
                     <label for="line_userid">LINE_userId</label>
                     <input type="text" id="line_userid" name="entry.685590610" placeholder="LINE User ID" required>
@@ -166,6 +165,9 @@
             <button type="submit" class="submit-btn">応募する</button>
         </form>
     </div>
+
+    <script src="src/getUrlParameter.js"></script>
+
 </body>
 
 </html>
