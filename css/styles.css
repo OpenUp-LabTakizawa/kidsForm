@@ -163,6 +163,26 @@ h1 {
     margin-top: 10px;
 }
 
+.question-answer-set-wait {
+    background-color: #fff1ca;
+    /* 背景色 */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.question-answer-set-wait p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.question-answer-set-wait label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
