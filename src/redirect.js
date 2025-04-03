@@ -27,7 +27,7 @@ async function redirect() {
     console.log("userAppStatus: " + userAppStatus);
 
     //ステータスに応じたページへリダイレクト
-    const redirectUrl = geturl(userAppStatus) + "?Id=" + userId + "&displayname=" + displayName;
+    const redirectUrl = geturl(userAppStatus) + "?id=" + userId + "&displayname=" + displayName;
     window.location.href = redirectUrl;
 }
 
