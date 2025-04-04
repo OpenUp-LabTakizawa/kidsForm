@@ -35,12 +35,18 @@
                 </div>
 
                 <div class="question-answer-set">
-                    <p>お申込みに関する個人情報、また参加時に提出いただく個人情報は、㈱オープンアップグループ（以下「当社」）が取得します<br>当社の個人情報保護方針（プライバシーポリシー）のご確認お願い致します
+                    <p>お申込みに関する個人情報、また参加時に提出いただく個人情報は、㈱オープンアップグループ（以下「当社」）が取得します<br>
+                        当社の個人情報保護方針<a href="https://caravan-kidstec.com/kanto_event/privacy-policy"
+                            target="_blank">（プライバシーポリシー）</a>のご確認お願い致します
                     </p>
-                    <!-- インラインスクロール -->
-                    <div class="scrollable">
 
+                    <iframe src="https://caravan-kidstec.com/kanto_event/privacy-policy" width="100%" height="300px"
+                        title="Google"></iframe>
+                    <!--
+                    <div class="scrollable">
+                        <div id="ppolicy"></div>
                     </div>
+                    -->
 
                     <label>
                         <input type="checkbox" id="agree_p-policy" name="entry.94117826" value="個人情報保護方針を確認しました"
@@ -164,7 +170,7 @@
                 <div class="question-answer-set" style="display: none;">
                     <div class="form-group">
                         <label for="line_userid">LINE_userId</label>
-                        <input type="text" id="line_userid" name="entry.685590610"required>
+                        <input type="text" id="line_userid" name="entry.685590610" required>
                     </div>
                 </div>
 
@@ -173,6 +179,7 @@
         </div>
 
         <script src="../src/getUrlParameter.js"></script>
+        <!-- <script src="../src/insertPrivacy.js"></script> -->
 
         <!-- 回答完了ページへのリダイレクト処理 -->
         <script type="text/javascript">
