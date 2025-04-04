@@ -7,13 +7,13 @@ CORSエラー回避 https://webird-programming.tech/archives/1495
 const gas_Url = "https://script.google.com/macros/s/AKfycbzZJca4lSb2CtGPmsQXiqSFOsqTUU8jaICCzO6g8jAnsTMHLLxu8pD87CW9m1fNYuO1/exec";  // GASのURLを設定
 
 //一般応募URL
-const appliedForm_url = "https://tanepon.github.io/kidsForm/pages/applied_form";
+const appliedForm_url = "https://openup-labtakizawa.github.io/kidsForm/pages/applied_form";
 //キャンセル待ち応募URL
-const waitlistForm_url = "https://tanepon.github.io/kidsForm/pages/waitlist_form";
+const waitlistForm_url = "https://openup-labtakizawa.github.io/kidsForm/pages/waitlist_form";
 //応募済URL
-const appAlready_url = "https://tanepon.github.io/kidsForm/pages/app_already";
+const appAlready_url = "https://openup-labtakizawa.github.io/kidsForm/pages/app_already";
 //応募締切URL
-const appClosed_url = "https://tanepon.github.io/kidsForm/pages/app_closed";
+const appClosed_url = "https://openup-labtakizawa.github.io/kidsForm/pages/app_closed";
 
 redirect();
 
