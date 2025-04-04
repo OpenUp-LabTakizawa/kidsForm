@@ -229,3 +229,12 @@ h1 {
 .submit-btn:hover {
     background-color: #45a049;
 }
+.scrollable {
+    width: 100%;
+    height: 30vh;
+    overflow: auto;
+    /* コンテンツが溢れたらスクロール */
+    border: 1px solid #ccc;
+    /* 枠線 */
+    background-color: #fff;
+}
