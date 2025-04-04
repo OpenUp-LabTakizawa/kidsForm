@@ -4,7 +4,7 @@ CORSエラー回避 https://webird-programming.tech/archives/1495
 */
 
 // GASのウェブアプリURLを指定（あなたのURLに置き換えます）
-const gas_Url = "https://script.google.com/macros/s/AKfycbzZJca4lSb2CtGPmsQXiqSFOsqTUU8jaICCzO6g8jAnsTMHLLxu8pD87CW9m1fNYuO1/exec";  // GASのURLを設定
+const gas_Url = "https://script.google.com/macros/s/AKfycbyB2xwc_OsL7MOx82BKYiEgYeqyLdSrxPg8adxF7Ljz0v5REHNAyFeau845oQWv8ypo/exec";  // GASのURLを設定
 
 //一般応募URL
 const appliedForm_url = "https://openup-labtakizawa.github.io/kidsForm/pages/applied_form";
