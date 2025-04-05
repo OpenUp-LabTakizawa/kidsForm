@@ -15,21 +15,50 @@ const appAlready_url = "https://openup-labtakizawa.github.io/kidsForm/pages/app_
 //応募締切URL
 const appClosed_url = "https://openup-labtakizawa.github.io/kidsForm/pages/app_closed";
 
-redirect();
-
-
-async function redirect() {
+// ページのDOMが読み込まれた後に実行されるようにする
+document.addEventListener("DOMContentLoaded", async function () {
+    // モーダル要素の取得
+    const modal = document.getElementById('myModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const closeModalBtn2 = document.getElementById('closeModalBtn2');
     const params = geturlParams();
-    const [userId, displayName] = [params[0], params[1]];
-    console.log("userID: " + userId + " " + "displayname: " + displayName);
 
-    const userAppStatus = await requestAppStatus(userId);
-    console.log("userAppStatus: " + userAppStatus);
+    // paramsにnullが含む場合はURL不正のモーダルウィンドウを表示
+    if (params.includes(null)) {
+        openModal();
+    } else {
+        const [userId, displayName] = [params[0], params[1]];
+        console.log("userID: " + userId + " " + "displayname: " + displayName);
 
-    //ステータスに応じたページへリダイレクト
-    const redirectUrl = geturl(userAppStatus) + "?id=" + userId + "&displayname=" + displayName;
-    window.location.href = redirectUrl;
-}
+        const userAppStatus = await requestAppStatus(userId);
+        console.log("userAppStatus: " + userAppStatus);
+
+        //ステータスに応じたページへリダイレクト
+        const redirectUrl = geturl(userAppStatus) + "?id=" + userId + "&displayname=" + displayName;
+        window.location.href = redirectUrl;
+    }
+
+    // モーダルを開く関数
+    function openModal() {
+        modal.style.display = 'block';
+    }
+
+    // モーダルを閉じる処理
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // モーダルを閉じるボタンのクリックイベント
+    closeModalBtn.onclick = closeModal;
+    closeModalBtn2.onclick = closeModal;
+
+    // モーダル外をクリックして閉じる処理
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+});
 
 
 // async/awaitを使って output を返す方法
