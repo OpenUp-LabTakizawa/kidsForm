@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>イベント応募フォーム</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="src/redirect.js"></script>
 </head>
 
 <body>
@@ -14,6 +13,21 @@
         <div class="form-container">
             <p>応募状況を確認しております</p>
             <p>しばらくお待ちください</p>
+        </div>
+    </div>
+
+    <!-- モーダルのコンテンツ -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>URLパラメータ不正!</h2>
+            <p>LINEに表示された応募URLからご応募をお願いします。
+            </p>
+            <button id="closeModalBtn2">閉じる</button>
+        </div>
+    </div>
+
+    <script src="src/redirect.js"></script>
 
 </body>
 
