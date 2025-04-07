@@ -12,18 +12,18 @@
     <img src="../src/キャンセル待ち.png" alt="受付画像" class="main-img">
     <div class="base">
         <div class="form-container">
-            <h1>キャンセル待ち応募フォーム</h1>
+            <h1>キャンセル待ち<br>応募フォーム</h1>
             <form
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfUlxGOv-MtjB9q6551mTl-EQSDwBKj2bv5yFiYH7H4JDVTOw/formResponse"
                 method="post" target="hidden_iframe" onsubmit="submitted=true;">
                 <div class="question-answer-set-wait">
                     <p>こどもテックキャラバンについてご一読ください<br>こどもテックキャラバンは以下の企業・団体が事務局として関わっています</p>
                     <ul class="qa-set-ul">
-                        <li>株式会社オープンアップグループ</a><br>(東証プライム市場上場)
+                        <li>株式会社オープンアップグループ<br>(東証プライム市場上場)
                         </li>
-                        <li>株式会社テイクアンドギヴ・ニーズ</a><br>(東証プライム市場上場)</li>
-                        <li>ICHI COMMONS株式会社</a><br>(スタートアップ企業)</li>
-                        <li>ロボットサバイバルプロジェクト/株式会社アイティプロジェクト</a><br>(プログラミング体験の創出普及活動)</li>
+                        <li>株式会社テイクアンドギヴ・ニーズ<br>(東証プライム市場上場)</li>
+                        <li>ICHI COMMONS株式会社<br>(スタートアップ企業)</li>
+                        <li>ロボットサバイバルプロジェクト/株式会社アイティプロジェクト<br>(プログラミング体験の創出普及活動)</li>
                     </ul>
                 </div>
 
@@ -182,8 +182,11 @@
                 <button type="submit" class="submit-btn">応募する</button>
             </form>
         </div>
-
+        
         <script src="../src/getUrlParameter.js"></script>
+
+        <!-- ボタン押したときの2重submit防止 -->
+         <script src="../src/disableSubmitButton.js"></script>
 
         <!-- 回答完了ページへのリダイレクト処理 -->
         <script type="text/javascript">
